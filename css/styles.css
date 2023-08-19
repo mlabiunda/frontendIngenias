@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+/*---HEADER---*/
+
+header {
+    background-color: white;
+}
+
+nav {
+    background-color: aquamarine;
+    margin: 10px;
+    padding: 8px;
+}
+
+.contenedorimagen {
+    text-align: center;
+}
+
+.img {
+    width: 40%;
+
+}
+
+a {
+    font-size: 13px;
+    color: rgb(85, 119, 97);
+    display: block;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/*---MAIN---*/
+
+h1 {
+    font-size: 30px;
+    color: rgb(85, 119, 97);
+}
+
+.contenedoresIndex {
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-rows: 50fr 50fr;
+    margin: 10px;
+    padding: 10px ;
+    }
+
+.contenedor {
+    margin: 10px;
+    padding: 10px ;
+    border: 2px solid rgb(85, 119, 97);
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    height: 170px;
+    align-items: center;
+}
+.fa-pagelines {
+    color: rgb(85, 119, 97);
+    width: 10px;
+    height: 10px;
+    padding-bottom: 5px;
+    align-items: center;
+    
+
+}
+
+.enlace {
+    color: white;
+    font-size: 30px;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.bloque1 {
+    font-size: 15px;
+    height: 50%;
+    margin: 10px;
+    padding: 80px;
+    text-align: center;
+    background-image: url("../img/concientizacion.jpg");
+    background-size: cover;
+}
+
+.bloque2 {
+    font-size: 15px;
+    height: 50%;
+    margin: 10px;
+    padding: 80px;
+    text-align: center;
+    background-image: url("../img/recoleccionSelectiva.jpg");
+    background-size: cover;
+}
+
+.bloque3 {
+    font-size: 15px;
+    height: 50%;
+    margin: 10px;
+    padding: 80px;
+    text-align: center;
+    background-image: url("../img/compostaje.jpeg");
+    background-size: cover;
+}
+
+.bloque4 {
+    font-size: 15px;
+    height: 50%;
+    margin: 10px;
+    padding: 80px;
+    text-align: center;
+    background-image: url("../img/compostaje2.jpg");
+    background-size: cover;
+}
+
+.fa-solid {
+    padding-right: 5px;
+}
+
+.bloque {
+    height: 50%;
+    margin-top: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+p {
+    color: rgb(85, 119, 97);
+    text-align: center;
+    font-size: 14px;
+    padding: 7px;
+    margin: 8px
+}
+
+/*---SUSTENTABILIDAD---*/
+
+.bloqueconcientizacion{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(217, 228, 153);
+    font-size: 30px;
+    color: rgb(85, 119, 97);
+
+}
+.concientizacion1 {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(217, 228, 72);
+}
+
+.concientizacion2 {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(217, 228, 113);
+
+}
+
+.concientizacion3 {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(217, 228, 153);
+}
+
+li{
+    list-style-type: none;
+}
+
+/*---Compostaje---*/
+.cuerpo {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    align-items: stretch;
+    align-content: center;
+    justify-content: center;
+    justify-items: center; 
+    }
+
+/*-----------------RECOLECCION SELECTIVA --------------*/
+
+.serviciosImagen {
+    text-align: center;
+    margin: 40px;
+}
+
+.servicios h1 {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.servicios p {
+    font-size: 12px;
+
+    }
+
+/*---Tienda---*/
+.contenedorProdutos {
+    display:grid ;
+    grid-template-columns: 10fr 10fr 10fr 10fr;
+    grid-row: 15fr 15fr ;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 10px;
+    padding: 80px;
+   }
+.produto__img {
+    width: 40%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    padding-top:5px;
+    }
+    .producto {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;    
+    border: 2px solid black;  
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    }
+    .producto title {
+    text-align: right;
+    font-size: 5px;
+    }
+.bloquetienda {
+    text-align: center;
+   }
+
+
+/*.boton-inicio {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(85, 119, 97);
+    color: white;
+    margin-bottom: 10px;
+    border-color: rgb(85,119,97);
+
+}*/
+/*----FOOTER---*/
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    background-color: rgb(68, 245, 140);
+    color: rgb(85, 119, 97);
+    margin: 10px;
+    padding: 5px;
+}
+
+.fa-brands {
+    padding-right: 5px;
+}
+
+.menufooter {
+    padding: 5px;
+}
+.menufooter3 {
+    padding: 5px;
+}
+
+/*---Media Queries---*/
+@media (min-width: 768px){
+
+.img{ 
+    width: 35%;
+}
+
+a:hover {
+color:rgb(90, 90, 14);
+font-size: larger;
+}
+
+/*---Main---*/
+.mainIndex {
+    display:grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    justify-items: center;
+}
+.bloque1{
+    width: 99%;
+    height: 90%;
+    margin: 0%;
+}
+
+.bloque2{
+    width: 99%;
+    height: 90%;
+    margin: 0%;
+}
+.bloque3{
+    width: 99%;
+    height: 90%;
+    margin:0%;
+}
+.bloque4{
+    width: 99%;
+    height: 90%;
+    margin: 0%;
+}
+
+/*---footer---*/
+
+footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+}
+.menufooter{
+    padding: 7px;
+}
+.menufooter3{
+    margin-top: 10px;
+}
+}
+
+@media (min-width: 1024px){
+
+    .img{
+        width: 25%;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    a{
+        font-size: 20px;
+    }
+    a:hover {
+        font-size: 25px;
+        }
+
+/*---footer---*/
+footer{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+  
+}
+.menufooter3{
+    margin-top: 0px;
+}
+
+.derechos{
+    padding: 7px;
+}
+ /*---recoleccion selectiva---*/
+
+ .servicios {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+    justify-items: center;
+}
+
+/* CSS*/ 
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pic-ctn {
+    width: 100vw;
+    height: 200px;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+  
+  .pic-ctn {
+    position: relative;
+    width: 100vw;
+    height: 250px;
+    margin-top: 10vh;
+    margin-bottom: 200px;
+  }
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 300px);
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }
+
+}
