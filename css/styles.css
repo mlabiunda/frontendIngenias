@@ -23,7 +23,7 @@ nav {
 
 .img {
     width: 40%;
-
+  
 }
 
 a {
@@ -133,9 +133,9 @@ h1 {
 
 p {
     color: rgb(85, 119, 97);
-    text-align: center;
+    text-align: justify;
     font-size: 14px;
-    padding: 7px;
+    padding: 5px;
     margin: 8px
 }
 
@@ -179,12 +179,18 @@ li{
 /*---Compostaje---*/
 .cuerpo {
     display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    align-items: stretch;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 50% 50%;
+    align-items: center;
     align-content: center;
     justify-content: center;
     justify-items: center; 
+    }
+    .icompost {
+        width: 50%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding-top:5px;
     }
 
 /*-----------------RECOLECCION SELECTIVA --------------*/
@@ -208,9 +214,8 @@ li{
 /*---Tienda---*/
 .contenedorProdutos {
     display:grid ;
-    grid-template-columns: 10fr 10fr 10fr 10fr;
-    grid-row: 15fr 15fr ;
-    align-items: center;
+    grid-template-columns: 50fr 50fr;
+    align-items: stretch;
     align-content: center;
     justify-content: center;
     justify-items: center;
@@ -240,9 +245,9 @@ li{
     text-align: right;
     font-size: 5px;
     }
-.bloquetienda {
+/*.bloquetienda {
     text-align: center;
-   }
+   }*/
 
 
 /*.boton-inicio {
@@ -291,6 +296,7 @@ color:rgb(90, 90, 14);
 font-size: larger;
 }
 
+
 /*---Main---*/
 .mainIndex {
     display:grid;
@@ -320,6 +326,9 @@ font-size: larger;
     height: 90%;
     margin: 0%;
 }
+.contenedorProdutos{
+    display:grid;
+    }
 
 /*---footer---*/
 
@@ -354,6 +363,10 @@ footer{
     a:hover {
         font-size: 25px;
         }
+       
+    .contenedorProdutos{
+    display:grid;
+    }
 
 /*---footer---*/
 footer{
