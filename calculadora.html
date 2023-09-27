@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Huella de Carbono</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="Js/java.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <header>
+     
+      <div class="headerhuella">
+        <h1 class="calcutitulo">Calculadora de Huella de Carbono</h1>
+      </div>
+      
+      <header>
+                   
+     <main>   
+    <div class="container">
+        
+       
+<br>
+<h4>    Paso 1: Gastos diarios en Energia</h4>
+        <form>
+            <div class="form-group">
+                <label for="Electrodomesticos">Consumo de Electrodomesticos y Luz</label>
+            <input type="number" class="form-control" id="Electrodomesticos" name="hs usadas" placeholder="Horas usadas" required>
+              </div>
+              <div class="form-group">
+                <label for="Electronica">Consumo de Electronica:</label>
+                <input type="number" class="form-control" id="Electronica" name="hs usadas" placeholder="Horas usadas" required>
+              </div>
+                         
+             
+            
+      </div>
+       <br>
+    
+       <div class="container">
+        
+<br>
+<h4>
+    Paso 2: Gastos diarios en Climatización
+</h4>
+      
+            <div class="form-group">
+                <label for="Refrigeracion">Consumo de Aires y ventiladores</label>
+            <input type="number" class="form-control" id="Refrigeracion" name="hs usadas" placeholder="Horas usadas" required>
+              </div>
+              <div class="form-group">
+                <label for="Calefaccion">Consumo de Calefacción a Gas:</label>
+                <input type="number" class="form-control" id="Calefaccion" name="hs usadas" placeholder="Horas usadas" required>
+              </div>
+                       
+              
+              <br>
+              
+            
+      </div>
+        <br>
+        <div class="container">
+           
+    <br>
+    <h4>
+        Paso 3: Gastos diarios en Transporte 
+    </h4>
+          
+                <div class="form-group">
+                    <label for="TransporteP">Gastos en Transporte Propio</label>
+                <input type="number" class="form-control" id="TransporteP" name="Horas de viaje" placeholder="horas en coche propio" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="TransporteE">Gasto en Transporte Público:</label>
+                    <input type="number" class="form-control" id="TransporteE" name="Horas de viaje" placeholder="horas en taxi, bus, tren, etc" required>
+                  </div>
+                             
+                  <button type="submit" onclick="return enviarFormulario()" class="btn btn-primary">Enviar</button>
+                </form>
+          </div>
+<div id="error">
+ 
+</div>
+      
+      <br>
+   
+      <a href="index.html"><i class="fa-solid fa-home" style="color: #718177;"></i>Ir al Home</a>
+      <br>
+      <br>
+    </main>  
+  </body>
+
+  </html>
