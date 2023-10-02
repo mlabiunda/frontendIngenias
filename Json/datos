@@ -1,0 +1,24 @@
+
+[
+  {
+    "nombre": "Maria Gomez",
+    "correo": "mgomez@mail.com",
+    "telefono": 1144522677
+  },
+  {
+    "nombre": "Juan Perez",
+    "correo": "jperez@mail.com",
+    "telefono": 1144556677
+  },
+  {
+    "nombre": "Clara Lopez",
+    "correo": "clopez@mail.com",
+    "telefono": 1111226677
+  },
+  {
+    "nombre": "Jose Juarez",
+    "correo": "jjuarez@mail.com",
+    "telefono": 1144553399
+  }
+]
+

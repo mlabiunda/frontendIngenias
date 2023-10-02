@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Registro</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="Js/java.js" type="text/javascript"></script>
+    
   </head>
 
   <body>
@@ -17,7 +17,7 @@
     <header>
     <div class="container">
         <h2>Formulario de Registro</h2>
-        <form action="" id="formuRegistro">
+        <form action="" id="formularioRegistro">
             <div class="form-group">
                 <label for="nombre">Nombre completo:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -32,16 +32,19 @@
               </div>
              
              
-              <button type="submit" class="btn btn-primary">Enviar</button>
+              <button type="submit" onclick="return enviarFormulario()" class="btn btn-primary">Enviar</button>
          
         </form>
         </div>
-        <div id="error"></div>
+        <div id="error1"></div>
+        
+        
    <br>
    <a href="tienda.html"><i class="fa-solid fa-shop" style="color: #718177;"></i>Volver a Tienda</a> 
 
       <br>
       <br>
+      <script src="Js/java.js" type="text/javascript"></script>
   </body>
 
   </html>

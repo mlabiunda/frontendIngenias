@@ -1,114 +1,151 @@
-/*let nombre = prompt("Introduce tu nombre");
-if (typeof nombre === "string")
-nombre = nombre.trim()
-if(nombre) {
-    alert("Bienvenido/a a Energia VIva," + nombre + ".");
-}
-if (nombre === ""){
-    alert("No has introducido nada. Recarga la página para intentarlo de nuevo")
-} else if (nombre === null){
-    alert("Has presionado cancel. Recarga la página para intentarlo de nuevo")
-}*/
+//  FUNCION CALCULADORA HUELLA  //
 
-// calculadora  //
+function Huella () {
 
-var Electrodomestico = document.getElementById(Electrodomestico);
-var Electronica = document.getElementById(Electronica);
-var Refrigeracion = document.getElementById(Refrigeracion);
-var Calefaccion = document.getElementById(Calefaccion);
-var TransporteP = document.getElementById(TransporteP);
-var TransporteE = document.getElementById(TransporteE);
-var error = document.getElementById(error);
-error.style.color = "red";
-function enviarFormulario ()  {
+  var Electrodomestico = document.getElementById("Electrodomestico").value;
+  var Electronica = document.getElementById("Electronica").value;
+  var Refrigeracion = document.getElementById("Refrigeracion").value;
+  var Calefaccion = document.getElementById("Calefaccion").value;
+  var TransporteP = document.getElementById("TransporteP").value;
+  var TransporteE = document.getElementById("TransporteE").value;
+
+  /*var suma; 
+  suma = Electrodomestico + Electronica + Calefaccion + Refrigeracion + TransporteP + TransporteE;
+    alert("tu huella es: ${suma.toFixed}");*/
+
+    const array = [ Electrodomestico, Electronica, Refrigeracion, Calefaccion, TransporteP, TransporteE];
+    
+    
+    const suma = array.reduce((valorAnterior, valorActual) => {
+      return parseFloat(valorAnterior) + parseFloat(valorActual) }, 0);
+
+
+    alert("tu huella es: " + suma);
+
+    var error = document.getElementById("error3");
+    error.style.color = "green";
+ 
   var mensajesError = []
-  if(Electrodomestico.value === null || Electrodomestico.value === " ")
-   {mensajesError.push("ingresa las hs");}
-  if(Electronica.value === null || Electronica.value === " ")
-      {mensajesError.push("ingresa las hs");}
-  if(Refrigeracion.value === null || Refrigeracion.value === " ")
-      {mensajesError.push("ingresa las hs");}
-  if(Calefaccion.value === null || Calefaccion.value === " ")
-      {mensajesError.push("ingresa las hs");}
-  if(TransporteP.value === null || TransporteP.value === " ")
-      {mensajesError.push("ingresa las hs");}  
-  if(TransporteE.value === null || TransporteE.value === " ")
-      {mensajesError.push("ingresa las hs");}
-      
-     error.innerHTML = mensajesError.join(" , ");
+  if (Electrodomestico.value !="" || Electronica.value !="" || Refrigeracion.value !="" || Calefaccion.value != "" || TransporteP.value !="" || TransporteE.value !="")
+   {mensajesError.push("Cuida el Planeta");}
+ 
+   error.innerHTML = mensajesError.join(" , ");
+ 
+   return false;
+     
 
-  return false;
 }
+
+
   
+
+    
 //  Formulario Registro  //
 
-var nombre = document.getElementById(nombre);
-var correo = document.getElementById(correo);
-var telefono = document.getElementById(telefono);
-var error = document.getElementById(error);
-error.style.color = "red";
-var form = document.getElementById(formuRegistro);
-form.addEventListener(submit, function (evt){
-  evt.preventDefault();
-var mensajesError = [];
-if(nombre.value === null || nombre.value === " "){
-  mensajesError.push("ingresa tu Nombre");
-}
-if(correo.value === null || correo.value === " "){
-  mensajesError.push("ingresa tu correo");
-}
-if(telefono.value === null || telefono.value === " "){
-  mensajesError.push("ingresa tu Nombre");
-}
-error.innerhtml = mensajesError.join(", ")});
+function enviarFormulario ()  {
 
+  var nombre = document.getElementById("nombre");
+  var correo = document.getElementById("correo");
+  var telefono = document.getElementById("telefono");
+
+  var error = document.getElementById("error1");
+  error.style.color = "green";
+
+  var mensajesError = []
+if(nombre.value === null || nombre.value === "")
+ {mensajesError.push("ingresa tu nombre");}
+if(correo.value === null || correo.value === "")
+    {mensajesError.push("ingresa tu correo");}
+if(telefono.value === null || telefono.value === "")
+    {mensajesError.push("ingresa tu telefono");}
+if(nombre.value !="" && correo.value !="" && telefono.value !=""){
+  mensajesError.push("Te registraste con exito");
+    }
+    error.innerHTML = mensajesError.join(" , ");
+    
+    return false;
+    }  
+
+  //  Construccion de un nuevo objeto  //
+{
+  this.nombre = nombre
+  this.correo = correo
+  this.telefono = telefono
+}
+const formularioNuevo = new enviarFormulario("Roberto Fernandez", "rfernandez@gmail.com", "2214102578")
+
+
+   
+    //  estructura de datos Json convertida a Javascript  //
+
+    
+var formxx ='{ {"nombre":"Maria Gomez","correo":"mgomez@mail.com","telefono":"1144522677"}, {"nombre":"Juana Perez","correo":"jperez@mail.com","telefono":"1133524477"}, {"nombre":"Jose Lopez","correo":"jlopez@mail.com","telefono": 1144523344},{"nombre":"Juan Gonzalez","correo":"jgonzalez@mail.com","telefono":"1144522211"} }'
+  
+//console.log(JsonForm)//
+
+//  Convierto Json a Java //
+let JsonConvertido = JSON.parse(formxx);
+console.log(JsonConvertido)
+
+//  guardo en Local Storage //
+localStorage.setItem(formxx,JsonConvertido);
+console.log(localStorage.getItem("JsonConvertido"))
+
+     
+    
 //  Formulario Sesion  //
 
-var usuario = document.getElementById(usuario);
-var palabraSecreta = document.getElementById(palabraSecreta);
-var error = document.getElementById(error);
-error.style.color = "red";
-var form = document.getElementById(formuSesion);
-form.addEventListener(submit, function (evt){
-  evt.preventDefault();
-var mensajesError = [];
-if(usuario.value === null || usuario.value === " "){
-  mensajesError.push("ingresa tu Usuario");
-}
-if(palabraSecreta.value === null || palabraSecreta.value === " "){
-  mensajesError.push("ingresa tu contraseña");
-}
+function enviarFormSes ()  {
 
-error.innerhtml = mensajesError.join(", ")});
-
-//  Json  //
-
-let formularioSesion = [
-  {
-usuario,
-palabraSecreta,
-  }
-];
-guardarInformacion(formularioSesion);
-
-function guardarInformacion(formularioSesion) {
-  let jsonFormularioSesion = JSON.stringify(formularioSesion);
-
-  localStorage.setItem(formularioSesion, jsonformualrioSesion);
+  var usuario = document.getElementById("usuario");
+  var palabraSecreta = document.getElementById("palabraSecreta");
   
+  var error = document.getElementById("error2");
+  error.style.color = "green";
+
+  var mensajesError = []
+if(usuario.value === null || usuario.value === "")
+ {mensajesError.push("ingresa tu usuario");}
+if(palabraSecreta.value === null || palabraSecreta.value === "")
+    {mensajesError.push("ingresa tu clave");}
+if(usuario.value !="" && palabraSecreta.value !=""){
+      mensajesError.push("Te logueaste con exito");
+        }
+    error.innerHTML = mensajesError.join(" , ");
+
+    return false;
+    }   
+  //  Guardado de información que carga el usuario y luego se la muestro //
+
+    function guardarDatos(){
+      localStorage.usuario = document.getElementById("usuario").value;
+      localStorage.palabraSecreta = document.getElementById("palabraSecreta").value;
+     }
+     
+     function recuperarDatos(){
+      if ((localStorage.usuario != undefined) && (localStorage.palabraSecreta != undefined)) {
+       document.getElementById("datos").innerHTML = "Usuario: " + localStorage.usuario + "<br/> Password: " + localStorage.palabraSecreta;
+      }
+      else{
+       document.getElementById("datos").innerHTML = "No has introducido tu nombre y tu password";
+      }
+     }
+//  guardar informacion en local storage del Formulario de Sesion   //
+
+/*sessionStorage.setItem(usuario);
+let usuario = sessionStorage.getItem(usuario);*/
+
+
+
+/*  var guardarform = document.getElementById('formularioSesion').elements;
+for (var i = 0; i<= formularioSesion.length - 1; i++) {
+    
+    if(formularioSesion[i].type == 'text'){
+        
+        console.log(formularioSesion[i].value);
+        
+        localStorage.setItem(formularioSesion[i].id, JSON.stringify(formularioSesion[i].value));
+    }
 }
-
-let formularioReg = [
-  {
-    nombre,
-    correo,
-    telefono,
-  }
-];
-guardarInformacion(formularioReg);
-
-function guardarInformacion(formularioReg) {
-  let jsonFormularioReg = JSON.stringify(formularioReg);
-
-  localStorage.setItem(formularioReg, jsonFormularioReg);
-}
+//para probar que se guardaron bien los elementos, probamos en consola.
+console.log(localStorage);  */
