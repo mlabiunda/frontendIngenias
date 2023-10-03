@@ -79,17 +79,28 @@ const formularioNuevo = new enviarFormulario("Roberto Fernandez", "rfernandez@gm
     //  estructura de datos Json convertida a Javascript  //
 
     
-var formxx ='{ {"nombre":"Maria Gomez","correo":"mgomez@mail.com","telefono":"1144522677"}, {"nombre":"Juana Perez","correo":"jperez@mail.com","telefono":"1133524477"}, {"nombre":"Jose Lopez","correo":"jlopez@mail.com","telefono": 1144523344},{"nombre":"Juan Gonzalez","correo":"jgonzalez@mail.com","telefono":"1144522211"} }'
+var formxx =
+[
+  {nombre:"Maria Gomez",correo:"mgomez@mail.com",telefono:"1144522677"},
+   {nombre:"Juana Perez",correo:"jperez@mail.com",telefono:"1133524477"},
+    {nombre:"Jose Lopez",correo:"jlopez@mail.com",telefono: "1144523344"},
+    {nombre:"Juan Gonzalez",correo:"jgonzalez@mail.com",telefono:"1144522211"},
+];
   
-//console.log(JsonForm)//
+//console.log(formxx);
+const result = JSON.stringify(formxx);
+console.log(result);
 
 //  Convierto Json a Java //
-let JsonConvertido = JSON.parse(formxx);
+let JsonConvertido = JSON.parse(result);
 console.log(JsonConvertido)
 
 //  guardo en Local Storage //
 localStorage.setItem(formxx,JsonConvertido);
 console.log(localStorage.getItem("JsonConvertido"))
+
+     
+    
 
      
     
