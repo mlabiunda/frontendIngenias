@@ -24,13 +24,15 @@ function Huella () {
 
     var error = document.getElementById("error3");
     error.style.color = "green";
+    error.style.textAlign = "center"
+    error.style.fontSize = "40px"
  
   var mensajesError = []
   if (Electrodomestico.value !="" || Electronica.value !="" || Refrigeracion.value !="" || Calefaccion.value != "" || TransporteP.value !="" || TransporteE.value !="")
-   {mensajesError.push("Cuida el Planeta");}
+   {mensajesError.push("¡¡Cuida el Planeta!!");}
  
    error.innerHTML = mensajesError.join(" , ");
- 
+  
    return false;
      
 
@@ -141,22 +143,3 @@ if(usuario.value !="" && palabraSecreta.value !=""){
        document.getElementById("datos").innerHTML = "No has introducido tu nombre y tu password";
       }
      }
-//  guardar informacion en local storage del Formulario de Sesion   //
-
-/*sessionStorage.setItem(usuario);
-let usuario = sessionStorage.getItem(usuario);*/
-
-
-
-/*  var guardarform = document.getElementById('formularioSesion').elements;
-for (var i = 0; i<= formularioSesion.length - 1; i++) {
-    
-    if(formularioSesion[i].type == 'text'){
-        
-        console.log(formularioSesion[i].value);
-        
-        localStorage.setItem(formularioSesion[i].id, JSON.stringify(formularioSesion[i].value));
-    }
-}
-//para probar que se guardaron bien los elementos, probamos en consola.
-console.log(localStorage);  */
