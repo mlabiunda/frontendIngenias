@@ -7,7 +7,7 @@
 
 /*---HEADER---*/
 
-header {
+ header {
     background-color: white;
 }
 .botonbusqueda {
@@ -212,6 +212,15 @@ li{
     list-style-type: none;
     }
 
+    #boton1 {
+        font-size: 18px;
+        background-color:beige;
+        text-align: center;
+        margin-left: 10px;
+        padding: 10px;
+        border-color: black;
+        color:rgb(90, 90, 14)
+      }     
     
 /*---Compostaje---*/
 .cuerpo {
@@ -291,12 +300,12 @@ li{
         font-size: large;
         background-color: #cfeede;
     }
-/*.bloquetienda {
+.bloquetienda {
     text-align: center;
    }*/
 
 
-/*.boton-inicio {
+.boton-inicio {
     display: grid;
     place-items: center;
     margin: auto;
@@ -307,13 +316,13 @@ li{
     margin-bottom: 10px;
     border-color: rgb(85,119,97);
 
-}*/
+}
 /*----FOOTER---*/
 
 footer {
     font-size: 12px;
     text-align: center;
-    background-color: rgb(165, 231, 210);
+    background-color: rgb(173, 223, 207);
     color: rgb(85, 119, 97);
     margin: 10px;
     padding: 5px;

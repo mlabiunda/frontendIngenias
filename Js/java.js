@@ -9,9 +9,7 @@ function Huella () {
   var TransporteP = document.getElementById("TransporteP").value;
   var TransporteE = document.getElementById("TransporteE").value;
 
-  /*var suma; 
-  suma = Electrodomestico + Electronica + Calefaccion + Refrigeracion + TransporteP + TransporteE;
-    alert("tu huella es: ${suma.toFixed}");*/
+ 
 
     const array = [ Electrodomestico, Electronica, Refrigeracion, Calefaccion, TransporteP, TransporteE];
     
@@ -128,7 +126,9 @@ if(usuario.value !="" && palabraSecreta.value !=""){
 
     return false;
     }   
-  //  Guardado de información que carga el usuario y luego se la muestro //
+  
+  
+    //  Guardado de información que carga el usuario y luego se la muestro //
 
     function guardarDatos(){
       localStorage.usuario = document.getElementById("usuario").value;
@@ -143,3 +143,38 @@ if(usuario.value !="" && palabraSecreta.value !=""){
        document.getElementById("datos").innerHTML = "No has introducido tu nombre y tu password";
       }
      }
+
+     // API de carbono en la atmosfera //
+    function HuellaAPI(){
+      let jsondata;  
+
+  var url='https://daily-atmosphere-carbon-dioxide-concentration.p.rapidapi.com/api/co2-api';
+
+  const options = {
+  method: 'GET',
+  headers: {
+  'X-RapidAPI-Key': 'c2ffd7b7e1msh12266397bd55dadp1e18f0jsn114b60e6b5bf',
+  'X-RapidAPI-Host': 'daily-atmosphere-carbon-dioxide-concentration.p.rapidapi.com',
+  },
+  };
+
+  
+  fetch(url,options)
+    .then(  
+          function(u){ return u.json();}
+        )
+    .then(
+          function(json){
+            jsondata=json;
+            var dia = jsondata.co2.at(-1).day;
+            var mes = jsondata.co2.at(-1).month;
+            var año = jsondata.co2.at(-1).year;
+            var cycle = jsondata.co2.at(-1).cycle;
+            var trend = jsondata.co2.at(-1).trend;
+          
+            var element = document.querySelector('#calchuella p');
+            element.innerText="El valor de carbono en la atmosfera del " + dia + "/" + mes + "/" + año + " es de " + cycle + " unidades.";
+              
+        })
+    .catch((error) => {console.log (error);}
+      )}
