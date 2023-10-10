@@ -145,7 +145,7 @@ if(usuario.value !="" && palabraSecreta.value !=""){
      }
 
      // API de carbono en la atmosfera //
-    function HuellaAPI(){
+    function huellaAPI(){
       let jsondata;  
 
   var url='https://daily-atmosphere-carbon-dioxide-concentration.p.rapidapi.com/api/co2-api';
