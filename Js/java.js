@@ -9,29 +9,30 @@ function Huella () {
   var TransporteP = document.getElementById("TransporteP").value;
   var TransporteE = document.getElementById("TransporteE").value;
 
- 
+  
 
     const array = [ Electrodomestico, Electronica, Refrigeracion, Calefaccion, TransporteP, TransporteE];
     
     
     const suma = array.reduce((valorAnterior, valorActual) => {
       return parseFloat(valorAnterior) + parseFloat(valorActual) }, 0);
+     
+      alert ("tu huella es: " + suma)
 
-
-    alert("tu huella es: " + suma);
-
+    
     var error = document.getElementById("error3");
     error.style.color = "green";
     error.style.textAlign = "center"
     error.style.fontSize = "40px"
  
-  var mensajesError = []
-  if (Electrodomestico.value !="" || Electronica.value !="" || Refrigeracion.value !="" || Calefaccion.value != "" || TransporteP.value !="" || TransporteE.value !="")
-   {mensajesError.push("¡¡Cuida el Planeta!!");}
- 
-   error.innerHTML = mensajesError.join(" , ");
-  
-   return false;
+    var mensajesError = []
+    if (Electrodomestico.value !="" || Electronica.value !="" || Refrigeracion.value !="" || Calefaccion.value != "" || TransporteP.value !="" || TransporteE.value !="")
+     {mensajesError.push("¡¡Cuida el Planeta!!");}
+   
+     error.innerHTML = mensajesError.join(" , ");
+    
+     return false;
+       
      
 
 }
@@ -40,7 +41,7 @@ function Huella () {
   
 
     
-//  Formulario Registro  //
+//  Validación del Formulario Registro  //
 
 function enviarFormulario ()  {
 
@@ -61,52 +62,24 @@ if(telefono.value === null || telefono.value === "")
 if(nombre.value !="" && correo.value !="" && telefono.value !=""){
   mensajesError.push("Te registraste con exito");
     }
+   
     error.innerHTML = mensajesError.join(" , ");
     
     return false;
     }  
 
-  //  Construccion de un nuevo objeto  //
-{
-  this.nombre = nombre
-  this.correo = correo
-  this.telefono = telefono
-}
-const formularioNuevo = new enviarFormulario("Roberto Fernandez", "rfernandez@gmail.com", "2214102578")
-
-
-   
-    //  estructura de datos Json convertida a Javascript  //
-
-    
-var formxx =
-[
-  {nombre:"Maria Gomez",correo:"mgomez@mail.com",telefono:"1144522677"},
-   {nombre:"Juana Perez",correo:"jperez@mail.com",telefono:"1133524477"},
-    {nombre:"Jose Lopez",correo:"jlopez@mail.com",telefono: "1144523344"},
-    {nombre:"Juan Gonzalez",correo:"jgonzalez@mail.com",telefono:"1144522211"},
-];
   
-//console.log(formxx);
-const result = JSON.stringify(formxx);
-console.log(result);
 
-//  Convierto Json a Java //
-let JsonConvertido = JSON.parse(result);
-console.log(JsonConvertido)
 
-//  guardo en Local Storage //
-localStorage.setItem(formxx,JsonConvertido);
-console.log(localStorage.getItem("JsonConvertido"))
 
      
     
 
      
     
-//  Formulario Sesion  //
+//  Validación del Formulario Sesion  //
 
-function enviarFormSes ()  {
+/*function enviarFormSes ()  {
 
   var usuario = document.getElementById("usuario");
   var palabraSecreta = document.getElementById("palabraSecreta");
@@ -122,29 +95,30 @@ if(palabraSecreta.value === null || palabraSecreta.value === "")
 if(usuario.value !="" && palabraSecreta.value !=""){
       mensajesError.push("Te logueaste con exito");
         }
+
     error.innerHTML = mensajesError.join(" , ");
 
     return false;
-    }   
+    }   */
   
   
-    //  Guardado de información que carga el usuario y luego se la muestro //
+    //  Guardado de información que carga el usuario en el Local Storage y luego se la muestro (aramdo del Avatar)//
 
     function guardarDatos(){
       localStorage.usuario = document.getElementById("usuario").value;
-      localStorage.palabraSecreta = document.getElementById("palabraSecreta").value;
+      localStorage.Select1 = document.getElementById("Select1").value;
      }
      
      function recuperarDatos(){
-      if ((localStorage.usuario != undefined) && (localStorage.palabraSecreta != undefined)) {
-       document.getElementById("datos").innerHTML = "Usuario: " + localStorage.usuario + "<br/> Password: " + localStorage.palabraSecreta;
+      if ((localStorage.usuario != undefined) && (localStorage.Select1 != undefined)) {
+       document.getElementById("datos").innerHTML = "Nombre del Avatar: " + localStorage.usuario + "<br/> Color: " + localStorage.Select1;
       }
-      else{
-       document.getElementById("datos").innerHTML = "No has introducido tu nombre y tu password";
-      }
-     }
+    }
+      
+     
 
-     // API de carbono en la atmosfera //
+     // API de cantidad de carbono en la atmosfera //
+
     function huellaAPI(){
       let jsondata;  
 
@@ -178,3 +152,108 @@ if(usuario.value !="" && palabraSecreta.value !=""){
         })
     .catch((error) => {console.log (error);}
       )}
+
+      //Json tienda//
+
+        let jsonDeProductos = `[
+        {
+          "titulo": "Humus",
+          "precio": "$500",
+          "imagen": "img/humus de lombriz.jpg"
+        },
+        {
+          "titulo": "Semillas",
+          "precio": "$400",
+          "imagen": "img/semillas.jpg"
+        },
+        {
+          "titulo": "Compostera",
+          "precio": "$1000",
+          "imagen": "img/compostera.jpg"
+        },
+        {
+          "titulo": "libro de composta",
+          "precio": "$800",
+          "imagen": "img/librocomposta.jpg"
+        },
+        {
+          "titulo": "Cesto basura",
+          "precio": "$11000",
+          "imagen": "img/cestoverde.jpg"
+        },
+        {
+          "titulo": "Bolsas de residuo",
+          "precio": "$600",
+          "imagen": "img/bolsas.jpg"
+        }
+      ]`
+
+        
+      
+      let jsonConvertido = JSON.parse(jsonDeProductos)
+        console.log(jsonDeProductos);
+      
+       //recorrer el array jsonConvertido
+       for (let i = 0; i < jsonConvertido.length; i++){
+           //crear un article
+           let article = document.createElement("article")
+           //crear h7
+           let h7 = document.createElement("h7")
+           h7.innerText = jsonConvertido[i].titulo
+           //crear imagen
+           let img = document.createElement("img")
+           img.style.width = "25%"
+           img.src = jsonConvertido[i].imagen
+           //crear p
+           let p = document.createElement("p")
+           p.innerText = jsonConvertido[i].precio
+           p.style.fontSize = "20px"
+           //crear boton
+           let boton = document.createElement("button")
+           boton.classList.add ("botoncarrito")
+           boton.innerText = "Agregar al carrito"
+           boton.style.fontSize ="30"
+          //terminar de armar el article
+          article.appendChild(h7)
+           article.appendChild(img)
+           article.appendChild(p)
+           article.appendChild(boton)
+           //mandar el article a la seccion
+          document.getElementById("productosTienda").appendChild(article)
+       }
+      
+       // Agregar al carrito//
+
+    window.onload = () => {
+      let botones = document.querySelectorAll(".botoncarrito");
+      for (let i = 0; i <= botones.length; i++)
+      botones[i].addEventListener("click", e =>{
+      
+        localStorage.setItem("productoTitulo", jsonConvertido[i].titulo)
+        localStorage.setItem("productoPrecio", jsonConvertido[i].precio)
+        localStorage.setItem("productoImagen", jsonConvertido[i].imagen)
+       
+        let article = document.createElement("article")
+        //crear titulo y precio
+        let h7 = document.createElement("h7")
+        h7.innerText = localStorage.getItem("productoTitulo")
+        let p = document.createElement("p")
+        p.innerText = localStorage.getItem ("productoPrecio")
+        
+        article.appendChild(h7)
+        article.appendChild(p)
+        
+        document.getElementById("carrito").appendChild(article) 
+
+      });
+    };
+  
+  article.style.textAlign = center;
+
+      
+      
+
+    
+    
+    
+    

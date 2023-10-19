@@ -13,27 +13,32 @@
     <body>
         <header>
             <div class="contenedorimagen">
-                <img class="img" src="img/earth logo 2.png" alt="logo de la empresa">
-            </div>
+              <img class="rounded mx-auto d-block" style="width: 200px;" src="img/earth logo 2.png" alt="logo de la empresa">
+          </div>
         <header>
 
           <div class="container">
-            <h2>Inicia Sesión</h2>
+            <h2>Elige tu Avatar</h2>
             <form action="" id="formularioSesion">
                     <div class="form-group">
-                    <label for="usuario">Usuario:</label>
+                    <label for="usuario">Nombre de tu Avatar:</label>
                     <input type="text" class="form-control" id="usuario" name="usuario" required>
                   </div>
                   <div class="form-group">
-                    <label for="palabraSecreta">Contraseña</label>
-                        <input id="palabraSecreta" name="palabraSecreta"
-                            class="form-control" type="password" name="Contraseña" required>
+                    <label for="FormControlSelect1">Elige el color del Avatar</label>
+<select class="form-control" id="Select1">
+                        <option>azul</option>
+                        <option>verde</option>
+                        <option>amarillo</option>
+                        <option>naranja</option>
+                        <option>violeta</option>
+                      </select>
                   </div>
              <!--    <button type="submit" onclick="enviarFormSes()" class="btn btn-primary">Inicia Sesión</button>-->
                  <br>
-                 <input type="button" onclick="guardarDatos()" value="Guardar datos" />
+                 <input type="button" onclick="guardarDatos()" value="Guardar tus Datos" />
 
-                 <p id="datos"> Pulsa para ver tu usuario y tu password. </p>
+                <p id="datos"> Pulsa para ver tu usuario y tu Avatar. </p>
                  
                  <input type="button" onclick="recuperarDatos()" value="Recuperar datos" />
                  <br>
@@ -41,7 +46,7 @@
                  
             </form>
           </div>
-          <div id="error2">
+          <!--<div id="error2">-->
 
           </div>
              <br>
