@@ -21,13 +21,12 @@
    
 }
 .form-inline {
-    margin-left: 85%;
+    margin-left: 60%;
 
-#encabezadolibre {
-    background-color: rgb(180, 212, 202);
+
 }
     
-}
+
 nav {
     background-color: rgb(165, 231, 209);
     margin: 10px;
@@ -70,6 +69,8 @@ h1 {
     color: rgb(85, 119, 97);
 }
 
+/* ---Nosotros---*/
+
 .contenedoresIndex {
     display: grid;
     grid-template-columns: 40fr 40fr;
@@ -88,7 +89,7 @@ h1 {
     background-color: rgb(238, 248, 239);
     text-align: center;
     font-size: 15px;
-    height: 170px;
+    height: 250px;
     align-items: center;
 }
 .fa-pagelines {
@@ -100,7 +101,7 @@ h1 {
     
 
 }
-
+/* ---- Index---*/
 .enlace {
     color: white;
     font-size: 30px;
@@ -185,19 +186,23 @@ p {
     padding: 10px;
     text-align: center;
     background-color: rgb(236, 241, 238);
+    height: 180px;
 }
 
 .concientizacion2 {
     margin: 10px;
     padding: 10px;
     text-align: center;
-    background-color: rgb(148, 194, 150);}
+    background-color: rgb(148, 194, 150);
+    height: 180px;
+}
 
 .concientizacion3 {
     margin: 10px;
     padding: 10px;
     text-align: center;
     background-color: rgb(175, 184, 177);
+    height: 180px;
 }
 .huellaspasos {
     display: flexbox;
@@ -223,7 +228,7 @@ li{
         font-size: 18px;
         background-color:beige;
         text-align: center;
-        margin-left: 10px;
+        margin: 10px;
         padding: 10px;
         border-color: black;
         color:rgb(90, 90, 14)
@@ -232,8 +237,8 @@ li{
 /*---Compostaje---*/
 .cuerpo {
     display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-columns: 50% 50%;
+    grid-template-rows: 25fr 25fr 25fr 25fr;
+    grid-template-columns: 50fr 50fr;
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -251,11 +256,14 @@ li{
 .sesrvicios { 
     display: grid;
     grid-template-columns: 40fr 40fr;
+    grid-template-rows: 45fr 45fr 45frx;
+    margin: 10px;
+    padding: 10px;
 }
 
 .serviciosImagen {
     text-align: center;
-    margin: 40px;
+    
 }
 
 .servicios h1 {
@@ -265,7 +273,7 @@ li{
 }
 
 .servicios p {
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
 
     }
@@ -273,14 +281,14 @@ li{
 /*---Tienda---*/
 #productosTienda {
     display:grid ;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 400px;
-    align-items: stretch;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 300px;
+    align-items: center;
     align-content: center;
     justify-content: center;
     justify-items: center;
     margin: 10px;
-    padding: 50px;
+    padding: 5px;
    }
    article {
     box-sizing: border-box;    
@@ -289,8 +297,16 @@ li{
     background-color: white;
     text-align: center;
     align-items: center;
-    margin: 0 1.5%;
-    padding: 30px 20px;
+    margin: 10px;
+    padding: 3px;
+    height: 250px ;
+    
+   
+    
+   }
+   .carrito{
+    align-items: center;
+    height: 180px;
    }
    h7 {
     font-size: 25px;
@@ -298,34 +314,20 @@ li{
     text-align: right;
    }
 
-   /* .producto {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-    margin: 0 1.5%;
-    padding: 30px 20px;
-    box-sizing: border-box;    
-    border: 2px solid black;  
-    border-radius: 10px;
-    background-color: white;
-    text-align: center;
-    }
-    .producto title {
-    text-align: right;
-    font-size: 5px;
+   
+  
+
+
+    .carrito{
+        font-size: 18px;
+        background-color: #b6e0ca;
+        border-radius: 5px;
+        border: 2px solid rgb(88, 97, 88);
+        margin: 15px; 
+        margin-bottom: 25px;
+    
     }
 
-    .botontienda {
-    width: 200px;
-    font-size: 20px;
-    }*/
-    button {
-        font-size: large;
-        background-color: #cfeede;
-    }
-/*.bloquetienda {
-    text-align: center;
-   }*/
 
 
 .boton-inicio {

@@ -8,36 +8,37 @@ function Huella () {
   var Calefaccion = document.getElementById("Calefaccion").value;
   var TransporteP = document.getElementById("TransporteP").value;
   var TransporteE = document.getElementById("TransporteE").value;
-
-  
-
-    const array = [ Electrodomestico, Electronica, Refrigeracion, Calefaccion, TransporteP, TransporteE];
-    
-    
-    const suma = array.reduce((valorAnterior, valorActual) => {
-      return parseFloat(valorAnterior) + parseFloat(valorActual) }, 0);
-     
-      alert ("tu huella es: " + suma)
-
-    
-    var error = document.getElementById("error3");
-    error.style.color = "green";
-    error.style.textAlign = "center"
-    error.style.fontSize = "40px"
  
-    var mensajesError = []
-    if (Electrodomestico.value !="" || Electronica.value !="" || Refrigeracion.value !="" || Calefaccion.value != "" || TransporteP.value !="" || TransporteE.value !="")
-     {mensajesError.push("¡¡Cuida el Planeta!!");}
-   
-     error.innerHTML = mensajesError.join(" , ");
-    
-     return false;
-       
+
+  var mensajesError = [];
+
+  if (Electrodomestico =="" || Electronica =="" || Refrigeracion =="" ||
+   Calefaccion == "" || TransporteP =="" || TransporteE =="")
+   {
+
+   mensajesError.push("Completa este campo");
+    error.innerHTML = mensajesError.join(" , ");
+
+
+  } else {
+
+      const array = [ Electrodomestico, Electronica, Refrigeracion, Calefaccion, TransporteP, TransporteE];
      
+     
+      const suma = array.reduce((valorAnterior, valorActual) => {
+        return parseFloat(valorAnterior) + parseFloat(valorActual) }, 0);
+     
+      alert ("tu huella es de " + suma + " unidades. ¡¡Cuida el Planeta!!")
 
+      var error = document.getElementById("error3");
+      
+  }
+ 
+
+   return false;
+     
+ 
 }
-
-
   
 
     
@@ -140,6 +141,7 @@ if(usuario.value !="" && palabraSecreta.value !=""){
     .then(
           function(json){
             jsondata=json;
+            console.log (jsondata)
             var dia = jsondata.co2.at(-1).day;
             var mes = jsondata.co2.at(-1).month;
             var año = jsondata.co2.at(-1).year;
@@ -164,7 +166,7 @@ if(usuario.value !="" && palabraSecreta.value !=""){
         {
           "titulo": "Semillas",
           "precio": "$400",
-          "imagen": "img/semillas.jpg"
+          "imagen": "img/granos.jpg"
         },
         {
           "titulo": "Compostera",
@@ -172,14 +174,14 @@ if(usuario.value !="" && palabraSecreta.value !=""){
           "imagen": "img/compostera.jpg"
         },
         {
-          "titulo": "libro de composta",
+          "titulo": "Regadera",
           "precio": "$800",
-          "imagen": "img/librocomposta.jpg"
+          "imagen": "img/regadera.jpg"
         },
         {
-          "titulo": "Cesto basura",
+          "titulo": "Cestos de basura",
           "precio": "$11000",
-          "imagen": "img/cestoverde.jpg"
+          "imagen": "img/cestosresiduos.jpg"
         },
         {
           "titulo": "Bolsas de residuo",
@@ -207,12 +209,13 @@ if(usuario.value !="" && palabraSecreta.value !=""){
            //crear p
            let p = document.createElement("p")
            p.innerText = jsonConvertido[i].precio
-           p.style.fontSize = "20px"
+           p.style.fontSize = "18px"
            //crear boton
            let boton = document.createElement("button")
            boton.classList.add ("botoncarrito")
            boton.innerText = "Agregar al carrito"
-           boton.style.fontSize ="30"
+           boton.style.fontSize ="15"
+                      
           //terminar de armar el article
           article.appendChild(h7)
            article.appendChild(img)
@@ -234,6 +237,7 @@ if(usuario.value !="" && palabraSecreta.value !=""){
         localStorage.setItem("productoImagen", jsonConvertido[i].imagen)
        
         let article = document.createElement("article")
+        
         //crear titulo y precio
         let h7 = document.createElement("h7")
         h7.innerText = localStorage.getItem("productoTitulo")
@@ -248,7 +252,7 @@ if(usuario.value !="" && palabraSecreta.value !=""){
       });
     };
   
-  article.style.textAlign = center;
+ 
 
       
       
