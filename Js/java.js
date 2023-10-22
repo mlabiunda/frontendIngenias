@@ -237,17 +237,21 @@ if(usuario.value !="" && palabraSecreta.value !=""){
         localStorage.setItem("productoImagen", jsonConvertido[i].imagen)
        
         let article = document.createElement("article")
-        
-        //crear titulo y precio
-        let h7 = document.createElement("h7")
-        h7.innerText = localStorage.getItem("productoTitulo")
-        let p = document.createElement("p")
-        p.innerText = localStorage.getItem ("productoPrecio")
-        
-        article.appendChild(h7)
-        article.appendChild(p)
-        
-        document.getElementById("carrito").appendChild(article) 
+        article.style.height = "130px"
+          //crear h2
+          let h7 = document.createElement("h7")
+           // h2.innerText = jsonConvertido[0].titulo
+          h7.innerText = localStorage.getItem("productoTitulo")
+          let img = document.createElement("img")
+           img.style.width = "5%"
+           img.src = localStorage.getItem("productoImagen")
+           //crear p
+           let p = document.createElement("p")
+           p.innerText = localStorage.getItem("productoPrecio")
+          article.appendChild(h7)
+          article.appendChild(img)
+          article.appendChild(p)
+          document.getElementById("carrito").appendChild(article) 
 
       });
     };
