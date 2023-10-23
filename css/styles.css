@@ -255,14 +255,19 @@ li{
 
 .sesrvicios { 
     display: grid;
-    grid-template-columns: 40fr 40fr;
-    grid-template-rows: 45fr 45fr 45frx;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
     margin: 10px;
     padding: 10px;
 }
 
 .serviciosImagen {
     text-align: center;
+    margin: 10px;
     
 }
 
@@ -279,69 +284,112 @@ li{
     }
 
 /*---Tienda---*/
-#productosTienda {
-    display:grid ;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 300px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    margin: 10px;
-    padding: 5px;
-   }
-   article {
-    box-sizing: border-box;    
-    border: 2px solid black;  
-    border-radius: 10px;
-    background-color: white;
-    text-align: center;
-    align-items: center;
-    margin: 10px;
-    padding: 3px;
-    height: 250px ;
-    
-   
-    
-   }
-   .carrito{
-    align-items: center;
-    height: 180px;
-   }
-   h7 {
-    font-size: 25px;
-    color: green;
-    text-align: right;
-   }
 
-   
-  
-
-
-    .carrito{
-        font-size: 18px;
-        background-color: #b6e0ca;
-        border-radius: 5px;
-        border: 2px solid rgb(88, 97, 88);
-        margin: 15px; 
-        margin-bottom: 25px;
-    
-    }
-
-
-
-.boton-inicio {
+.lista {
     display: grid;
-    place-items: center;
-    margin: auto;
+    grid-template-columns: repeat(2,1fr);
+    box-sizing: border-box;
+    width: 80%;
+    margin: 10px;
     padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(85, 119, 97);
-    color: white;
-    margin-bottom: 10px;
-    border-color: rgb(85,119,97);
-
-}
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .tarjetas p {
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+  }
+  
+  .item-box {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #d8d8d8, #f2f2f2);
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    box-shadow: 0.4rem 0.4rem #d6d6d6;
+    width: 80%;  
+  }
+  
+  .item-box-img {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 70%;  
+  }
+  
+  .item-img {
+    display: block;
+    height: 70%;
+    width: 70%;
+    border-radius: 0.5rem;
+  }
+  .item-title {
+    display: flex;
+    justify-content: center;
+    color: #9abf49;
+    padding: 0.2rem;
+  }
+  .item-text {
+    color: #6cb892;
+  }
+  
+  .box-botones {
+    display: flex;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.4rem 0.4rem #d6d6d6;
+    width: 80%;  
+  }
+  
+  .boton-comprar {
+    padding: 0.4rem;
+    color:#409e6a;
+    font-weight: bolder;
+    border: none;
+   
+  }
+  
+  .carrito-compra {
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    color: #3f918a;
+    margin: 1rem auto;
+    border-radius: .5rem;
+    padding: .8rem;
+    background-image: linear-gradient(to bottom right, #d8d8d8, #f2f2f2);
+    box-shadow: 0.4rem 0.4rem #d6d6d6;
+  }
+  
+  .boton-productos {
+    text-align: center;
+    padding: 0.5rem;
+    margin: 1rem;
+  }
+  
+  .carrito-compra h5 {
+    color:#252c30;
+    font-weight: bold;
+  }
+  
+  .carrito-compra ul {
+    list-style: none;
+  }
+  
+  .carrito-compra img, .carrito-compra p {
+    display: inline;
+  }
 /*----FOOTER---*/
 
 footer {
