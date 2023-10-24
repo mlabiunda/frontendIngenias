@@ -278,7 +278,7 @@ if(usuario.value !="" && palabraSecreta.value !=""){
         comprado.appendChild(totalDeCompra);
 
         // Boton de confirmar compra  //
-        document.getElementById('confirmar-compra').classList.remove('oculto');
+        document.getElementById('pagar').classList.remove('oculto');
       };
       
       
@@ -329,4 +329,9 @@ if(usuario.value !="" && palabraSecreta.value !=""){
         document.getElementById("eliminarCarrito").disabled = true;
       };
       
+      // Botón Pagar
+      let pagar = document.getElementById('pagar');
       
+      pagar.addEventListener('click', () => {
+        alert('Comunicate con nosotros, solo aceptamos transferencias');
+      });  
