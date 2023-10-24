@@ -390,6 +390,12 @@ li{
   .carrito-compra img, .carrito-compra p {
     display: inline;
   }
+
+
+  .oculto{
+    display: none;
+  }
+
 /*----FOOTER---*/
 
 footer {
